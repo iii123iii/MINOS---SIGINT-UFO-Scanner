@@ -17,7 +17,7 @@ version = 1.0
 # Python/runtime requirements.
 # opencv + numpy are built from source for Android by python-for-android,
 # which is the heavy part of the build.
-requirements = python3,kivy==2.3.0,numpy,opencv
+requirements = python3,kivy,numpy,opencv
 
 orientation = portrait
 fullscreen = 0
