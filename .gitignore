@@ -1,0 +1,18 @@
+# Buildozer / python-for-android build artifacts
+.buildozer/
+bin/
+*.apk
+*.aab
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+
+# Downloaded model weights
+models/
+*.onnx
+*.pt
+*.caffemodel
