@@ -28,7 +28,10 @@ android.permissions = CAMERA,READ_EXTERNAL_STORAGE,WRITE_EXTERNAL_STORAGE
 # Android API / build tooling. SDK/NDK are auto-downloaded by buildozer.
 android.api = 33
 android.minapi = 24
-android.ndk = 25b
+# NDK version intentionally left unset so python-for-android downloads its
+# own recommended NDK. The develop branch builds Python 3.14 + NumPy 2.x,
+# whose C++ sources require a newer clang/libc++ than old NDKs (r25b's
+# clang-14 fails to compile numpy's unique.cpp).
 android.accept_sdk_license = True
 
 # Target 64-bit ARM (covers essentially all modern phones).
