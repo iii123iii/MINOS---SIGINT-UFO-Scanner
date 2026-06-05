@@ -37,6 +37,11 @@ android.archs = arm64-v8a
 # Use the maintained p4a develop branch for current opencv/numpy recipes.
 p4a.branch = develop
 
+# Local recipe overrides. Ships a patched libthorvg recipe whose upstream
+# version only globs the NDK r26+ "lib/clang/*" runtime layout and crashes
+# (IndexError) on NDK r25b's "lib64/clang/*" layout. The override tries both.
+p4a.local_recipes = ./p4a-recipes
+
 [buildozer]
 
 # Verbose so build progress/errors are visible in logs.
